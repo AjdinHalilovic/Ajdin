@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta author="Ajdin Halilović">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajdin Halilović</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="drop">
+            <div class="menuBtn" id="btn" onclick="MenuBtn(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav id="lista">
+                <ul>
+                    <a id="homebtn" href='#bg'>
+                        <li>Home</li>
+                    </a>
+                    <a id="aboutbtn" class="about" href='#about'>
+                        <li>About Me</li>
+                    </a>
+                    <a id="servicesbtn" href='#usluge'>
+                        <li>Services</li>
+                    </a>
+                    <a id="clientsbtn" href='#Feedbacks'>
+                        <li>Feedbacks</li>
+                    </a>
+                    <a id="contactbtn" href='#contact'>
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <header>
+            <div id="bg">
+                <p id="name"> Hello, I'm Ajdin Halilović</p>
+                <p id="descr">FULL STACK DEVELOPER</p>
+                <div class="discover">
+                    <span class="discover-line"></span>
+                    <a href="#about" class="scrll">Scroll Down</a>
+                </div>
+                <div class="button-up">
+                    <a href="#bg" class="scrll">Scroll Top</a>
+                    <span class="discover-line"></span>
+                </div>
+            </div>
+        </header>
+        <section id="about">
+            <img src="ajda.jpg" alt="" id="ajda">
+            <div id="AboutMeDesc">
+                <h2>About Me</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+
+            </div>
+        </section>
+        <section id="usluge">
+        </section>
+        <section id="Feedbacks">
+            <div id="leftIcon" class="icons">
+                <i class="ic fas fa-chevron-left" onclick="Next(-1)" style="position: absolute;color: white;font-size: 35px;top: 50%;left:-30px;cursor:pointer;"></i>
+            </div>
+            <div class="slide">
+                <div class="slika" id="salih"></div>
+                <p class="FdbTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi dolorum fugiat odio architecto explicabo earum sed necessitatibus facilis officiis culpa ut iste nisi, nemo rerum eveniet cum delectus voluptates. Lorem ipsum dolor
+                </p>
+                <h4 class="FdbName">Salih Agic</h4>
+            </div>
+            <div class="slide">
+                <div class="slika" id="ljuba"></div>
+                <p class="FdbTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi dolorum fugiat odio architecto explicabo earum sed necessitatibus facilis officiis culpa ut iste nisi, nemo rerum eveniet cum delectus voluptates. Lorem ipsum dolor
+                </p>
+                <h4 class="FdbName">Ajdin Ljubuncic</h4>
+            </div>
+            <div class="slide">
+                <div class="slika" id="dzeno"></div>
+                <p class="FdbTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi dolorum fugiat odio architecto explicabo earum sed necessitatibus facilis officiis culpa ut iste nisi, nemo rerum eveniet cum delectus voluptates. Lorem ipsum dolor
+                </p>
+                <h4 class="FdbName">Dzenan Sakic</h4>
+            </div>
+            <div id="rightIcon" class="icons">
+                <i class="fas fa-chevron-right" onclick="Next(1)" style="position: absolute;color: white;font-size: 35px;top: 50%;cursor:pointer;"></i>
+            </div>
+        </section>
+        <div id="parallax">
+            <div id="empty"></div>
+        </div>
+        <section id="contact">
+            <form role="form">
+                <h2>Contact me</h2>
+                <input class="validateInput" type="text" name="ime" id="ime" placeholder="Name" required>
+                <input class="validateInput" type="email" name="email" id="email" placeholder="Email" required>
+                <input class="validateInput" type="text" name="subject" id="subject" placeholder="Subject" required>
+                <textarea class="validateInput" name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+                <button id="btnSendMsg" type="buttons">Send message</button>
+            </form>
+        </section>
+        <footer>
+            <p>ajdin.halilovic@edu.fit.ba</p>
+            <p>M.Tita bb, Mostar 88108</p>
+            <p>+387 62 673 287</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <script src="jquery.js"></script>
+</body>
+
+</html>

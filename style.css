@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #368eef; */
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("headerbg3lazy.jpg");
+    z-index: -1;
+}
+
+#bg {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.406);
+}
+
+#bg #name {
+    margin-right: 80vh;
+    font-size: 4em;
+}
+
+#bg #descr {
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+
+#bg p {
+    text-align: center;
+    letter-spacing: 10px;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    color: white;
+    text-shadow: 3px 3px #000000;
+}
+
+.discover {
+    position: absolute;
+    right: -30px;
+    bottom: 130px;
+    transform: rotate(-90deg);
+}
+
+.discover-line {
+    width: 72px;
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.button-up {
+    display: none;
+    position: fixed;
+    bottom: 144px;
+    right: -30px;
+    z-index: 40;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg);
+    animation: fadein 1s;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#drop {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.menuBtn {
+    display: none;
+    cursor: pointer;
+    justify-self: left;
+    position: fixed;
+    top: 0;
+    padding: 3vh 1vh;
+    z-index: 11;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 40px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+    border: 1px solid black;
+}
+
+nav {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    text-align: left;
+    color: white;
+    /* background-color: #0000007c; */
+    padding: 5vh 10vh;
+    transition: 1s;
+}
+
+.prov {
+    background-color: #000000a2;
+    padding: 2vh 10vh;
+    transition: 1s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 4vh;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(216, 207, 207);
+    transition: .1s;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    transition: all .3s;
+}
+
+a:hover {
+    color: #000000;
+    transform: scale(1.3);
+    text-shadow: 0 0 3px #ffffff, 0 0 3px #ffffff;
+}
+
+.focus {
+    color: #000000;
+    transform: scale(1.3);
+    text-shadow: 0 0 3px #ffffff, 0 0 3px #ffffff;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+    transform: rotate(-45deg) translate(-5px, 4px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+section {
+    width: 100%;
+    padding: 15vh;
+    background-color: white;
+    text-align: center;
+    display: flex;
+}
+
+section>p {
+    color: black;
+}
+
+#ajda {
+    height: 70vh;
+}
+
+#AboutMeDesc {
+    text-align: -webkit-center;
+    font-family: sans-serif;
+}
+
+#empty {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url("sectionbg2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#parallax {
+    padding: 0;
+    height: 55vh;
+    background: none;
+}
+
+#contact {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 70vh;
+    padding: 2vh;
+}
+
+input,
+#message {
+    width: 100%;
+    padding: 2vh;
+    margin: 3vh 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #425cbb;
+}
+
+#message:focus {
+    outline: none;
+    border-bottom: 1px solid #425cbb;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 46px;
+    letter-spacing: 0.04em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+#btnSendMsg {
+    width: 45%;
+    padding: 20px;
+    background-color: #12a89d;
+    border: none;
+    border: 1px solid #12a89d;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+#btnSendMsg:hover {
+    background-color: white;
+    color: #12a89d;
+}
+
+#btnSendMsg:focus {
+    outline: none;
+}
+
+#usluge {
+    width: 100%;
+    height: 100vh;
+    background-color: #12a89d;
+    background-image: url("sectionbg3.jpg");
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+#skills {
+    width: 100%;
+    height: 35vh;
+    color: #ffffff;
+    padding: 9vh;
+    background-color: #3592ef;
+    font-family: sans-serif;
+}
+
+#skills div {
+    width: 25%;
+}
+
+.big {
+    font-size: 60px;
+}
+
+.small {
+    font-size: 20px;
+}
+
+#Feedbacks {
+    width: 100%;
+    height: 75vh;
+    background-color: #0b0a0a;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 15vh 25vw;
+}
+
+.icons {
+    position: relative;
+}
+
+.slika {
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2vh auto;
+}
+
+.slide {
+    transition: ease-in-out .5s;
+}
+
+#salih {
+    background-image: url("salih.jpg");
+}
+
+#ljuba {
+    background-image: url("ljuba.jpg");
+}
+
+#dzeno {
+    background-image: url("dzeno.jpg");
+}
+
+.FdbTxt {
+    color: white;
+    font-size: 20px;
+    padding: 4vh;
+}
+
+h4 {
+    color: cornflowerblue;
+    padding-bottom: 4vh;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(51, 50, 50);
+    color: white;
+    padding: 3vh;
+    text-align: left;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+
+footer p {
+    padding-bottom: 2px;
+}
+
+@media (max-width: 750px) {
+    #bg #name {
+        font-size: 2.1em;
+        margin-right: 20vh;
+    }
+    #bg #descr {
+        padding-top: 10px;
+        font-size: 0.8em;
+        margin-right: 20vh;
+    }
+    #bg p {
+        letter-spacing: 4px;
+    }
+    .menuBtn {
+        display: block;
+    }
+    ul {
+        font-size: 23px;
+    }
+    nav {
+        display: none;
+        background-color: #0000007c;
+    }
+    .discover {
+        right: -60px;
+        bottom: 85px;
+    }
+    .discover a {
+        font-size: 13px;
+    }
+    .button-up {
+        right: -60px;
+        bottom: 100px;
+    }
+    .button-up a {
+        font-size: 13px;
+    }
+    #ajda {
+        height: 60vh;
+        margin: 20px 20px;
+    }
+    section {
+        box-sizing: border-box;
+        padding: 5vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* overflow: scroll; */
+    }
+    #empty {
+        background-size: cover;
+        height: 75vh;
+        top: 10%;
+    }
+    #parallax {
+        height: 40vh;
+    }
+    #btnSendMsg {
+        width: 100%;
+        padding: 2vh;
+        font-weight: 400;
+    }
+    input,
+    #message {
+        font-size: 12px;
+    }
+    #usluge {
+        background-image: url("sectionbg5.jpg");
+        background-size: contain;
+    }
+    #skills {
+        height: 100vh;
+    }
+    #skills div {
+        width: 100%;
+    }
+    #contact {
+        padding: 2vh;
+        height: 92vh;
+    }
+    #Feedbacks {
+        padding: 5vh 0;
+    }
+    .FdbTxt {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    footer {
+        padding: 1vh;
+        text-align: center;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 991.98px) {
+    #bg #name {
+        font-size: 3em;
+        margin-right: 40vh;
+    }
+    #bg #descr {
+        padding-top: 10px;
+        font-size: 1.1em;
+    }
+    #bg p {
+        letter-spacing: 7px;
+    }
+    .discover {
+        right: -70px;
+        bottom: 150px;
+    }
+    .discover a {
+        font-size: 16px;
+    }
+    .button-up {
+        right: -70px;
+        bottom: 150px;
+    }
+    .button-up a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 750px) {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    a {
+        padding: 10px 18px;
+    }
+    #AboutMeDesc p {
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        line-height: 2;
+        font-size: 1rem;
+        width: 80%;
+        padding-top: 5vh;
+    }
+}
